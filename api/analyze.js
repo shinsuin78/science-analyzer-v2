@@ -7,8 +7,8 @@ export default async function handler(req, res) {
         const apiKey = process.env.GEMINI_API_KEY;
         if (!apiKey) return res.status(500).json({ error: "API 키 없음" });
 
-        // 최신 표준 모델 이름으로 수정 (gemini-2.5-flash)
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+        // 최신 표준 모델명으로 업데이트 (gemini-3.8-flash)
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`;
         
         const response = await fetch(apiUrl, {
             method: 'POST',
